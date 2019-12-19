@@ -256,7 +256,7 @@ void nya()
     digitalWrite(LED_B, !toggleLeds);
     toggleLeds = !toggleLeds;
     
-    noTone(BUZZER); //останавливаем воспроизведение предыдущей ноты
+//    noTone(BUZZER); //останавливаем воспроизведение предыдущей ноты
 
     /*
      Вычислим длительность ноты. Разделим секунду на длительность ноты из массива
@@ -270,13 +270,13 @@ void nya()
     int octaveMul = 2;
     
     // воспроизведём ноту
-    tone(BUZZER, octaveMul * melody[thisNote], noteDuration);
+//    tone(BUZZER, octaveMul * melody[thisNote], noteDuration);
 
     /*
       Чтобы отделить ноты друг от друга, добавим небольшую паузу между ними
       30% от длины ноты звучат неплохо
     */
-    int pauseBetweenNotes = noteDuration * 1.30;
+    int pauseBetweenNotes = noteDuration * 1.30 * 3.0;
     delay(pauseBetweenNotes);
 
   }
